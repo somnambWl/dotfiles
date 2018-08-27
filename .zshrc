@@ -1,0 +1,1 @@
+/home/kubaw/.zprezto/runcoms/zshrc
