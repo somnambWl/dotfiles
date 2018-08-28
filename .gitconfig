@@ -1,0 +1,21 @@
+[user]
+	name = somnambWl
+	email = somnambWl@gmail.com
+[push]
+	default = matching
+[diff]
+	tool = meld
+[merge]
+	tool = kdiff3
+[core]
+	autocrlf = input
+	editor = vim
+
+[url "https://bitbucket.org/"]
+	insteadOf = bb:
+
+[url "https://github.com/"]
+	insteadOf = gh:
+
+[url "https://gist.github.com/"]
+	insteadOf = gist:
