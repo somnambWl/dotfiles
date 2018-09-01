@@ -4,12 +4,14 @@
 [push]
 	default = matching
 [diff]
-	tool = meld
+	tool = kdiff3
 [merge]
 	tool = kdiff3
 [core]
 	autocrlf = input
 	editor = vim
+	excludesFile = *.swp
+
 
 [url "https://bitbucket.org/"]
 	insteadOf = bb:

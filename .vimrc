@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set rtp+=~/.vim/plugged/fzf
+
 " Load vim-plug
 if empty(glob("~/.vim/autoload/plug.vim"))
     execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
@@ -12,11 +14,15 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'lervag/vimtex'
 Plug 'Valloric/YouCompleteMe'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'ryanoasis/vim-devicons'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
 
-set encoding=utf-8
+set encoding=UTF-8
 
 "----- Gruvbox-colorscheme -----"
 colorscheme gruvbox
@@ -76,3 +82,14 @@ au BufNewFile,BufRead *.html
 map <F4> mzgg=G`z   
 
 set pastetoggle=<F2>
+
+"multi cursor pluggin
+"let g:multi_cursor_use_default_mapping=0
+" Default mapping
+let g:multi_cursor_next_key='<C-n>' "next
+let g:multi_cursor_prev_key='<C-k>' "prev
+let g:multi_cursor_skip_key='<C-x>' "skip
+let g:multi_cursor_quit_key='<Esc>' "quit
+
+nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>     "turn off YCM
+nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>     "turn on YCM

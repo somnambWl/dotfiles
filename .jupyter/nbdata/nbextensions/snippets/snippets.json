@@ -1,0 +1,61 @@
+{
+    "snippets" : [
+        {
+            "name" : "Imports",
+            "code" : [
+		"# Načtení balíčků",
+		"",
+		"import numpy as np",
+		"",
+		"",
+		"# Grafy",
+		"import matplotlib.pyplot as plt",
+		"%matplotlib notebook",
+		"import matplotlib.ticker as mtick",
+		"from cycler import cycler",
+		"import seaborn as sns"
+            ]
+        },
+        {
+            "name" : "Seaborn",
+            "code" : [
+		"# Seaborn advanced",
+		"",
+		"sns.set(style='ticks',          # 'ticks', 'darkgrid'",
+		"        palette='colorblind',   # 'colorblind', 'pastel', 'muted', 'bright'",
+		"        #palette=sns.color_palette('Accent'),   # 'Set1', 'Set2', 'Dark2', 'Accent'",
+		"        rc = {",
+		"           'figure.autolayout': True,   # Automaticky nastaví velikost grafu, aby se vešel do obrazu",
+		"           'figure.figsize': (8, 6),    # Velikost obrázku - šířka, výška (v palcích)",
+		"           'legend.frameon': True,      # Rámeček okolo legendy",
+		"           'patch.linewidth': 2.0,      # Velikost čáry okolo rámečku",
+		"           'lines.markersize': 6,       # Velikost bodů",
+		"           'lines.linewidth': 2.0,      # Tloušťka čar",
+		"           'font.size': 20,             # Velikost hodnot na osách",
+		"           'legend.fontsize': 20,       # Velikost textu v legendě",
+		"           'axes.labelsize': 22,        # Velikost názvů os",
+		"           'axes.titlesize': 22,        # Velikost nadpisu",
+		"           'axes.grid': True,           # Mřížka",
+		"           'grid.color': '0.9',         # Světlost čar mřížky - 1 = bílá, 0 = černá",
+		"           'grid.linestyle': '-',       # Typ čárkování mřížka",
+		"           'grid.linewidth': 1.0,       # Tloušťka čar mřížky",
+		"           'xtick.major.size': 8,       # Velikost čárek na x-ové ose",
+		"           'ytick.major.size': 8,       # Velikost čárek na y-ové ose",
+		"           'xtick.major.pad': 10.0,     # Vzdálenost čísel na x-ové ose od osy",
+		"           'ytick.major.pad': 10.0,     # Vzdálenost čísel na y-ové ose od osy",
+		"           }",
+		"       )", 
+		"",
+		"# Parametry specifikované ve slovníku rc vždy přepíší defaultní styl.",
+		"# Všechny parametry je možno najít zde: https://matplotlib.org/users/customizing.html",
+		"",
+		"# Zajímavé odkazy:",
+		"# Seaborn dokumentace o barvách: https://seaborn.pydata.org/tutorial/color_palettes.html",
+		"# Barevné palety v Seabornu: http://jose-coto.com/styling-with-seaborn",
+		"",
+		"# Vykreslení nastavení grafu",
+		"#sns.plotting_context()"
+            ]
+        }
+    ]
+}
