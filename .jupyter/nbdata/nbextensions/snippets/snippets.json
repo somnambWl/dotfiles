@@ -39,6 +39,8 @@
 		"           'grid.color': '0.9',         # Světlost čar mřížky - 1 = bílá, 0 = černá",
 		"           'grid.linestyle': '-',       # Typ čárkování mřížka",
 		"           'grid.linewidth': 1.0,       # Tloušťka čar mřížky",
+		"           'xtick.labelsize': 20,       # Velikost popisů na x-ové ose",
+		"           'ytick.labelsize': 20,       # Velikost popisů na y-ové ose",
 		"           'xtick.major.size': 8,       # Velikost čárek na x-ové ose",
 		"           'ytick.major.size': 8,       # Velikost čárek na y-ové ose",
 		"           'xtick.major.pad': 10.0,     # Vzdálenost čísel na x-ové ose od osy",

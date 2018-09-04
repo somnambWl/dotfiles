@@ -276,6 +276,9 @@ tmux_conf_copy_to_os_clipboard=false
 bind v split-window -v
 bind h split-window -h
 
+unbind r
+bind-key r command-prompt -I "#W" "rename-window '%%'"
+
 # increase history size
 #set -g history-limit 10000
 
