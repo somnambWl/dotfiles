@@ -46,6 +46,8 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+        \ highlight OverLength ctermbg=darkgrey guibg=#592929 |
+    \ match OverLength /\%79v.*/ |
 "----------------"
 
 "----- C++ indentation -----"
@@ -62,12 +64,22 @@ au BufNewFile,BufRead *.cpp,*.hpp
     \ match OverLength /\%79v.*/ |
 "---------------------------"
 
+"----- Fortran indentation -----"
+au BufNewFile,BufRead *.f,*.f90
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+        \ highlight OverLength ctermbg=darkgrey guibg=#592929 |
+    \ match OverLength /\%79v.*/ |
+"---------------------------"
+
 au BufNewFile,BufRead *.html
     \ set tabstop=2 |
     \ set expandtab |
-
-
-
 
 "----- My commands -----"
 :command Cws set syntax=whitespace   "Obarvi mezery cervene a taby zelene" 
