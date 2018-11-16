@@ -18,6 +18,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kshenoy/vim-signature'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
@@ -46,6 +47,8 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
+        \ highlight OverLength ctermbg=darkgrey guibg=#592929 |
+    \ match OverLength /\%79v.*/ |
 "----------------"
 
 "----- C++ indentation -----"
@@ -77,10 +80,19 @@ au BufNewFile,BufRead *.f,*.f90
 
 au BufNewFile,BufRead *.html
     \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set textwidth=79 |
     \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix |
+        \ highlight OverLength ctermbg=darkgrey guibg=#592929 |
+    \ match OverLength /\%79v.*/ |
+"---------------------------"
 
-
-
+au BufNewFile,BufRead *.html
+    \ set tabstop=2 |
+    \ set expandtab |
 
 "----- My commands -----"
 :command Cws set syntax=whitespace   "Obarvi mezery cervene a taby zelene" 
