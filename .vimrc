@@ -18,6 +18,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'kshenoy/vim-signature'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
