@@ -3,6 +3,12 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+bind-key -n C-Left if-shell "$is_vim" "send-keys C-Left"  "select-pane -L"
+bind-key -n C-Down if-shell "$is_vim" "send-keys C-Down"  "select-pane -D"
+bind-key -n C-Up if-shell "$is_vim" "send-keys C-Up"  "select-pane -U"
+bind-key -n C-Right if-shell "$is_vim" "send-keys C-Right"  "select-pane -R"
+bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 # -- navigation ----------------------------------------------------------------
 
@@ -12,6 +18,8 @@
 #   - and iTerm2 is configured to send [1;9A -> [1;9D for option + arrow keys
 # then uncomment the following line to make Meta + arrow keys mapping work
 #set -ga terminal-overrides "*:kUP3=\e[1;9A,*:kDN3=\e[1;9B,*:kRIT3=\e[1;9C,*:kLFT3=\e[1;9D"
+
+set -g mouse on
 
 set -g window-status-separator ''
 
@@ -276,8 +284,8 @@ tmux_conf_copy_to_os_clipboard=false
 bind v split-window -v
 bind h split-window -h
 
-unbind r
-bind-key r command-prompt -I "#W" "rename-window '%%'"
+#unbind r
+#bind-key r command-prompt -I "#W" "rename-window '%%'"
 
 # increase history size
 #set -g history-limit 10000

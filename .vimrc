@@ -18,6 +18,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'kshenoy/vim-signature'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -118,3 +119,12 @@ let g:multi_cursor_quit_key='<Esc>' "quit
 
 nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>     "turn off YCM
 nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>     "turn on YCM
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
+" Write all buffers before navigating from Vim to tmux pane
+let g:tmux_navigator_save_on_switch = 2
