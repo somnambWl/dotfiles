@@ -20,6 +20,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kshenoy/vim-signature'
+Plug 'goerz/jupytext.vim'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
