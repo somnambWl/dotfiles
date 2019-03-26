@@ -20,6 +20,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kshenoy/vim-signature'
+Plug 'goerz/jupytext.vim'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
@@ -90,10 +91,6 @@ au BufNewFile,BufRead *.html
         \ highlight OverLength ctermbg=darkgrey guibg=#592929 |
     \ match OverLength /\%79v.*/ |
 "---------------------------"
-
-au BufNewFile,BufRead *.html
-    \ set tabstop=2 |
-    \ set expandtab |
 
 "----- My commands -----"
 :command Cws set syntax=whitespace   "Obarvi mezery cervene a taby zelene" 
