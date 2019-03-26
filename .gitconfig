@@ -12,7 +12,6 @@
 	editor = vim
 	excludesFile = *.swp
 
-
 [url "https://bitbucket.org/"]
 	insteadOf = bb:
 
@@ -21,3 +20,5 @@
 
 [url "https://gist.github.com/"]
 	insteadOf = gist:
+[commit]
+	template = /home/kubaw/.gitmessage

@@ -84,16 +84,11 @@ au BufNewFile,BufRead *.html
     \ set softtabstop=2 |
     \ set shiftwidth=2 |
     \ set textwidth=79 |
-    \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix |
         \ highlight OverLength ctermbg=darkgrey guibg=#592929 |
     \ match OverLength /\%79v.*/ |
 "---------------------------"
-
-au BufNewFile,BufRead *.html
-    \ set tabstop=2 |
-    \ set expandtab |
 
 "----- My commands -----"
 :command Cws set syntax=whitespace   "Obarvi mezery cervene a taby zelene" 
@@ -109,16 +104,20 @@ map <F4> mzgg=G`z
 
 set pastetoggle=<F2>
 
-"multi cursor pluggin
-"let g:multi_cursor_use_default_mapping=0
-" Default mapping
-let g:multi_cursor_next_key='<C-n>' "next
-let g:multi_cursor_prev_key='<C-k>' "prev
-let g:multi_cursor_skip_key='<C-x>' "skip
-let g:multi_cursor_quit_key='<Esc>' "quit
+"multi cursor pluggin"
+"let g:multi_cursor_use_default_mapping=0"
+" Default mapping"
+"next"
+let g:multi_cursor_next_key='<C-n>' 
+"previous"
+let g:multi_cursor_prev_key='<C-k>'
+"skip"
+let g:multi_cursor_skip_key='<C-x>'
+"quit"
+let g:multi_cursor_quit_key='<Esc>'
 
-nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>     "turn off YCM
-nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>     "turn on YCM
+nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>     "turn off YCM"
+nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>     "turn on YCM"
 
 let g:tmux_navigator_no_mappings = 1
 
