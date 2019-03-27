@@ -281,7 +281,7 @@ tmux_conf_copy_to_os_clipboard=false
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
 
-bind v split-window -v
+#bind v split-window -v
 bind h split-window -h
 
 #unbind r

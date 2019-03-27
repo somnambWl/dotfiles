@@ -20,7 +20,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'kshenoy/vim-signature'
+" Edit jupyter notebook directly from vim "
 Plug 'goerz/jupytext.vim'
+" Ctags "
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 filetype plugin indent on    " required
@@ -128,3 +132,6 @@ nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
 " Write all buffers before navigating from Vim to tmux pane
 let g:tmux_navigator_save_on_switch = 2
+
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
