@@ -22,3 +22,5 @@
 	insteadOf = gist:
 [commit]
 	template = /home/kubaw/.gitmessage
+[init]
+	templatedir = /home/kubaw/.git-templates/
