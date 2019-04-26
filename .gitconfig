@@ -21,6 +21,6 @@
 [url "https://gist.github.com/"]
 	insteadOf = gist:
 [commit]
-	template = /home/kubaw/.gitmessage
+	template = ~/.git-templates/commit-message.txt
 [init]
-	templatedir = /home/kubaw/.git-templates/
+	templatedir = ~/.git-templates
